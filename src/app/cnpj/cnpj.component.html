@@ -1,0 +1,46 @@
+<form #form="ngForm">
+  <div class="col-12">
+    <p-button icon="pi pi-arrow-left" styleClass="p-button-rounded p-button-text p-button-raised" routerLink="/"></p-button>
+  </div>
+  <div class="col-8 md:col-6 lg:col-3">
+    <p-inputMask type="tel" mask="99.999.999/9999-99" [(ngModel)]="buscacnpj" minlength="14"  (onBlur)="buscarCNPJ(buscacnpj, form)"  name="cnpj" placeholder="99.999.999/9999-99" [unmask]="true" [required]="true"></p-inputMask>
+  </div>
+
+  <div class="col-4 md:col-6 lg:col-3">
+    <button pButton type="button" label="Pesquisar" class="p-button-raised"
+    (click)="buscarCNPJ(buscacnpj, form)" [disabled]="form.invalid"></button>
+  </div>
+
+  <div class="flex flex-wrap mt-5" *ngIf="buscar">
+   
+   
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="cep" name="cep" disabled="true">
+        <label htmlFor="cep">CEP</label>
+      </span>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-3 mt-2">
+      <span class="p-float-label">
+        <input class="w-full" pInputText id="razao" name="razao" ngModel disabled="true">
+        <label htmlFor="razao">Razão social</label>
+      </span>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-3 mt-2">
+      <span class="p-float-label">
+        <input class="w-full" pInputText id="fantasia" name="fantasia" ngModel disabled="true">
+        <label htmlFor="fantasia">Nome fantasia</label>
+      </span>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-3 mt-2">
+      <span class="p-float-label">
+        <input class="w-full" pInputText id="telefone" name="telefone" ngModel disabled="true">
+        <label htmlFor="telefone">Telefone</label>
+      </span>
+    </div>
+
+  </div>
+</form>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,11 +11,14 @@ export class AppComponent implements OnInit {
 ;
   
 constructor(
-private router: Router
+private router: Router,
+private title: Title
 ){}
   
   ngOnInit(
-  ) { }
+  ) {
+    this.title.setTitle('Inicio');
+   }
 
   exibindoBotoes() {
     let chave: boolean;
