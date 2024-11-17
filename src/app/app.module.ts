@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { HttpClientModule } from '@angular/common/http';
 import { CnpjService } from './cnpj/cnpj.service';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [	
@@ -25,7 +26,8 @@ import { CnpjService } from './cnpj/cnpj.service';
     AppRoutingModule,
     HttpClientModule,
     PrimeNGModule,
-    FormsModule
+    FormsModule,
+    ToastModule
   ],
   providers: [CnpjService, CepService, MessageService],
   bootstrap: [AppComponent]

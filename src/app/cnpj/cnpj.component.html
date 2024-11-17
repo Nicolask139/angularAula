@@ -7,38 +7,94 @@
   </div>
 
   <div class="col-4 md:col-6 lg:col-3">
+    <p-toast></p-toast>
     <button pButton type="button" label="Pesquisar" class="p-button-raised"
     (click)="buscarCNPJ(buscacnpj, form)" [disabled]="form.invalid"></button>
   </div>
 
   <div class="flex flex-wrap mt-5" *ngIf="buscar">
-   
-   
+    
     <div class="col-12 md:col-6 lg:col-3">
       <span class="p-float-label">
-        <input class="w-full" pInputText ngModel id="cep" name="cep" disabled="true">
+        <input class="w-full" pInputText ngModel id="razao_social" name="razao_social" [disabled]="razao_social !== null && razao_social !== ''">
+        <label htmlFor="razao_social">Razão Social</label>
+      </span>
+    </div>
+    
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="nome_fantasia" name="nome_fantasia" [disabled]="nome_fantasia !== null && nome_fantasia !== ''">
+        <label htmlFor="nome_fantasia">Nome Fantasia</label>
+      </span>
+    </div>
+    
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="situacao_cadastral" name="situacao_cadastral" [disabled]="situacao_cadastral !== null && situacao_cadastral !== ''">
+        <label htmlFor="situacao_cadastral">Situação Cadastral</label>
+      </span>
+    </div>
+    
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="descricao_situacao_cadastral" name="descricao_situacao_cadastral" [disabled]="descricao_situacao_cadastral !== null && descricao_situacao_cadastral !== ''">
+        <label htmlFor="descricao_situacao_cadastral">Descrição Situação Cadastral</label>
+      </span>
+    </div>
+    
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="data_inicio_atividade" name="data_inicio_atividade" [disabled]="data_inicio_atividade !== null && data_inicio_atividade !== ''">
+        <label htmlFor="data_inicio_atividade">Data Início Atividade</label>
+      </span>
+    </div>
+    
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="cnae_fiscal" name="cnae_fiscal" [disabled]="cnae_fiscal !== null && cnae_fiscal !== ''">
+        <label htmlFor="cnae_fiscal">CNAE Fiscal</label>
+      </span>
+    </div>
+    
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="codigo_municipio" name="codigo_municipio" [disabled]="codigo_municipio !== null && codigo_municipio !== ''">
+        <label htmlFor="codigo_municipio">Código Município</label>
+      </span>
+    </div>
+    
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="municipio" name="municipio" [disabled]="municipio !== null && municipio !== ''">
+        <label htmlFor="municipio">Município</label>
+      </span>
+    </div>
+    
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="uf" name="uf" [disabled]="uf !== null && uf !== ''">
+        <label htmlFor="uf">UF</label>
+      </span>
+    </div>
+    
+    <div class="col-12 md:col-6 lg:col-3">
+      <span class="p-float-label">
+        <input class="w-full" pInputText ngModel id="cep" name="cep" [disabled]="cep !== null && cep !== ''">
         <label htmlFor="cep">CEP</label>
       </span>
     </div>
-
-    <div class="col-12 md:col-6 lg:col-3 mt-2">
+    
+    <div class="col-12 md:col-6 lg:col-3">
       <span class="p-float-label">
-        <input class="w-full" pInputText id="razao" name="razao" ngModel disabled="true">
-        <label htmlFor="razao">Razão social</label>
+        <input class="w-full" pInputText ngModel id="bairro" name="bairro" [disabled]="bairro !== null && bairro !== ''">
+        <label htmlFor="bairro">Bairro</label>
       </span>
     </div>
-
-    <div class="col-12 md:col-6 lg:col-3 mt-2">
+    
+    <div class="col-12 md:col-6 lg:col-3">
       <span class="p-float-label">
-        <input class="w-full" pInputText id="fantasia" name="fantasia" ngModel disabled="true">
-        <label htmlFor="fantasia">Nome fantasia</label>
-      </span>
-    </div>
-
-    <div class="col-12 md:col-6 lg:col-3 mt-2">
-      <span class="p-float-label">
-        <input class="w-full" pInputText id="telefone" name="telefone" ngModel disabled="true">
-        <label htmlFor="telefone">Telefone</label>
+        <input class="w-full" pInputText ngModel id="logradouro" name="logradouro" [disabled]="logradouro !== null && logradouro !== ''">
+        <label htmlFor="logradouro">Logradouro</label>
       </span>
     </div>
 

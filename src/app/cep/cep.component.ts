@@ -40,7 +40,7 @@ export class CepComponent implements OnInit {
           this.messageService.add({
             severity: 'error',
             summary: 'Atenção',
-            detail: 'Erro ao busca CEP!'
+            detail: 'Erro ao buscar CEP!'
           });
         }
       })
